@@ -4,5 +4,34 @@
              x:Class="AppCustoViagem.App">
     <Application.Resources>
 
+        <ResourceDictionary>
+
+            <Style x:Key="plainButton" TargetType="Button">
+
+                <Setter Property="BackgroundColor" Value="#eee"/>
+                <Setter Property="TextColor" Value="black"/>
+                <Setter Property="FontSize" Value="20"/>
+
+            </Style>
+
+            <Style x:Key="Titulo" TargetType="Label">
+
+                <Setter Property="BackgroundColor" Value="#3f51b5"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="30"/>
+
+            </Style>
+
+            <Style x:Key="TextEntrada" TargetType="Entry">
+
+                <Setter Property="TextColor" Value="Accent"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+
+            </Style>
+            
+        </ResourceDictionary>
+
     </Application.Resources>
 </Application>

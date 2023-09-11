@@ -1,24 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCustoViagem.MainPage">
+             x:Class="AppCustoViagem.MainPage"
+             Title="Custo de Viagem"
+             BackgroundColor="#000">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <Grid RowSpacing="10" ColumnSpacing="10" Padding="5" BackgroundColor="#eee">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Label Text="Origem:" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelRotulo}"/>
+        
+        <Label Text="Destino:" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelRotulo}"/>
+        
+        <Entry x:Name="entryOrigem" Placeholder="Nome da Cidade" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource TextEntrada}"/>
+        
+        <Entry x:Name="entryDestino" Placeholder="Nome da Cidade" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Keyboard="Text" Style="{StaticResource TextEntrada}"/>
+
+        <Label Text="Consumo Carro" Grid.Row="3" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" Style="{StaticResource Titulo}"/>
+
+        <Label Text="Distância:" Grid.Row="4" Grid.Column="0" Style="{StaticResource LabelRotulo}"/>
+
+        <Label x:Name="lblConsumo" Text="Consumo:" Grid.Row="5" Grid.Column="0" Style="{StaticResource LabelRotulo}"/>
+
+        <Label x:Name="lblValorC" Text="Valor do Combustível:" Grid.Row="6" Grid.Column="0" FontSize="15" Style="{StaticResource LabelRotulo}"/>
+
+        <Entry x:Name="entryDistância" Placeholder="Km" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource TextEntrada}"/>
+
+        <Entry x:Name="entryConsumo" Placeholder="Km/l" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource TextEntrada}"/>
+
+        <Entry x:Name="entryValorC" Placeholder="R$ 0.0" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource TextEntrada}"/>
+
+        <Label x:Name="lblTitulo3" Text="Pedágio" Grid.Row="7" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" Style="{StaticResource Titulo}"/>
+
+        <Label Text="Valor:" Grid.Row="8" Grid.ColumnSpan="2" Style="{StaticResource LabelRotulo}"/>
+
+        <Entry x:Name="entryValorP" Placeholder="R$ 0.0" Grid.Row="8" Grid.Column="1" Grid.RowSpan="2" Style="{StaticResource TextEntrada}"/>
+
+        <Button x:Name="btnPedagio" Text="Add" Grid.Row="8" Grid.Column="2" Clicked="btnPedagio_Clicked"/>
+
+        <Button Text="Lista" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" Clicked="Button_Clicked"/>
+
+        <Button Text="Calcular" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" Clicked="Button_Clicked_1"/>
+
+        <Button Text="Limpar" Grid.Row="10" Grid.Column="2" Clicked="Button_Clicked_2"/>
+
+    </Grid> 
+
+    
 
 </ContentPage>
